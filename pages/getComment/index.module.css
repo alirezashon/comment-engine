@@ -1,0 +1,99 @@
+/**
+ * Accordion container
+ *
+ * @format
+ */
+
+.accordion {
+	width: 100%;
+	max-width: 150vh;
+	margin: 0 auto;
+}
+
+/* Accordion item */
+.accordionItem {
+	margin-bottom: 10px;
+}
+
+/* Accordion checkbox */
+.accordionCheckbox {
+	display: none;
+}
+
+/* Accordion header */
+.accordionHeader {
+	display: block;
+	padding: 10px;
+	background-color: #cbdda0;
+	border-radius: 1vh;
+	border: ridge 1vh #b7db04;
+	box-shadow: 1px 1px 5px 1px #0a3000, 1px 1px 11px 3px #a4a292 inset;
+	text-align: center;
+	font-weight: bold;
+	color: #0a3000;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+/* Accordion header on hover */
+.accordionHeader:hover {
+	background-color: #e5e5e5;
+}
+
+/* Accordion content */
+.accordionContent {
+	direction: rtl;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+
+/* Accordion checkbox checked state */
+.accordionCheckbox:checked ~ .accordionContent {
+	max-height: 500px;
+	/* Set a maximum height for the content */
+	padding: 10px;
+	background-color: #f9f9f9;
+}
+
+/* Table Styles */
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	cursor: pointer;
+}
+
+.goldBackground {
+    background-color: gold;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid rgb(230, 183, 11);
+	transition: background-color 0.3s ease;
+}
+
+.cell {
+	padding: 10px;
+    background-color: #faf7db;
+	border: 1px solid rgb(130, 198, 13);
+	transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.table tbody tr:hover {
+	background-color: rgb(234, 176, 176);
+}
+
+/* Animation */
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.row {
+	animation: fadeIn 0.5s ease;
+}
